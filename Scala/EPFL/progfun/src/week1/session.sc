@@ -1,5 +1,8 @@
-/*object session {
-  1 + 2 * 3
+object session {
+
+  3+4
+
+  // Newton-Raphson way
 
   def abs(x: Double) = if (x < 0) -x else x
 
@@ -7,39 +10,22 @@
     if (isGoodEnough(guess, x)) guess
     else sqrtIter(improve(guess, x), x)
 
-  // Newton's way
-  //def isGoodEnough(guess: Double, x: Double) =
-  // abs(guess * guess - x) < 0.001
+  def isGoodEnough(guess: Double, x: Double): Boolean =
+    abs(guess*guess - x) / x < 0.001
 
-  // Newton-Raphson way
-  def isGoodEnough(guess: Double, x: Double) =
-    abs((guess + 2 / guess) / 2 < 0.001
-
-  def improve(guess: Double, x: Double) =
+  def improve(guess: Double, x: Double): Double =
     (guess + x / guess) / 2
 
-  def sqrt(x: Double) = sqrtIter(100.0, x)
-/*
-def sqrt(x: Double) = {
-  def sqrtIter(guess: Double): Double =
-	if (isGoodEnough(guess)) guess
-	else sqrtIter(improve(guess))
-  def improve(guess: Double) =
-	(guess + x / guess) / 2
-  def isGoodEnough(guess: Double) =
-	abs(square(guess) - x) < 0.001
-  sqrtIter(1.0)
-}
+  def sqrt(x: Double): Double = sqrtIter(1.0, x)
 
-
- */
   sqrt(2)
   sqrt(4)
   sqrt(3.14159)
   sqrt(1e-6)
-  sqrt(1e60)*/
-
-
-
-
+  sqrt(19e6)
 }
+
+
+
+
+
