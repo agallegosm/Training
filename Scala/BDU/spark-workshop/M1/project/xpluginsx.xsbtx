@@ -1,0 +1,1 @@
+addSbtPlugin("com.typesafe.sbtintellij" % "sbtintellij-plugin" % "1.8.0")
